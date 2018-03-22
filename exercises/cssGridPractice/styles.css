@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border:1px;
+}
+.container{
+    height: 300px;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: .5fr .5fr .25fr .75fr;
+    grid-gap: 5px;
+    border-radius: 20%;
+}
+.container div{
+    text-align: center;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: powderblue;
+}
+.green{
+    background-color: greenyellow;
+}
+.purple{
+    background-color: rebeccapurple;
+}
+.yellow{
+    background-color: yellow;
+    grid-column: 1 / span 2;
+}

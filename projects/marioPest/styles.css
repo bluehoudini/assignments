@@ -1,0 +1,67 @@
+@font-face{
+    font-family: SuperMario256;
+    src: url(SuperMario256.ttf);
+}
+* {
+    margin: 0;
+    font-size: 30px;
+    font-family: SuperMario256;
+}
+header{
+    padding-bottom: 30px;
+    background-color: red;
+}
+h1{
+    text-align: center;
+    color: blue;
+    transform: translate(0, 50%);
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+}
+.main{
+    background-image: url("https://images7.alphacoders.com/333/thumb-1920-333222.jpg");
+    background-size: 300vh;
+    background-repeat: no-repeat;
+}
+.goomba{
+    height: 200px;
+    width: 200px; 
+    background-image: url("https://www.mariowiki.com/images/thumb/9/9c/Goomba_-_MarioPartyStarRush.png/200px-Goomba_-_MarioPartyStarRush.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    margin-top: 30px;
+}
+.bobomb{
+    height:200px;
+    width:200px;
+    background-image: url("https://vignette.wikia.nocookie.net/mario/images/8/8c/Bob-omb%2C_New_Super_Mario_Bros._U.png/revision/latest?cb=20121119023919");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.cheepcheep{
+    background-image: url("https://www.mariowiki.com/images/thumb/6/63/CheepCheepNSMBU.png/200px-CheepCheepNSMBU.png");
+    height:200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+input{
+    margin-left: 200px;
+    width: 150px
+
+}
+span{
+    text-align: center;
+}
+footer{
+    color: red;
+    text-align: center;
+    background-color: blue;
+}

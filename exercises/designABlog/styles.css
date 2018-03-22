@@ -1,0 +1,84 @@
+h1 {
+    text-align: center;
+    font-weight: bold
+}
+
+.menu {
+    height: 60px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    
+   
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+#menu {
+    width: 400px;
+    font-size: 3px; 
+    text-align: center;
+}
+img {
+    height: 500px;
+    width: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: whitesmoke;
+}
+p{
+    font-weight: bold;
+    font-size: 27px;
+    text-align: center;
+    font-family: Arvo;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+#link1{
+    float: left;
+    font-size: 25px;
+    text-decoration: none;
+    list-style: none;
+    float: left;
+}
+#link2{
+    font-size: 25px;
+    float: right;
+    text-decoration: none;
+}
+#link3{
+    font-size: 25px;
+    text-decoration: none;
+}
+#nextPost{
+    text-align: center;
+    font-size: 30px;
+}
+#pic1{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#pic2{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#pic3{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+a{
+    text-decoration: none;
+}

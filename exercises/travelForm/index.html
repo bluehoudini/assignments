@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="styles.css"><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Extraplanar Travel</h1>
+    <form name= "travelInfo">
+        <h3>FIRST NAME: </h3>
+        <input type="text" name="firstName" placeholder="First Name">
+        <h3>LAST NAME: </h3>
+        <input type="text" name="lastName" placeholder="Last Name">
+        <h3>AGE: </h3>
+        <input type="number" name="age" placeholder="Age">
+        <h3>GENDER: </h3>
+        <input type="radio" value="male" id="gender" required>
+        <label for="genderBox">Male</label>
+        <input type="radio" value="female" id="genderF" required>
+        <label for="genderBox">Female</label></form>
+        <h3>DESTINATION</h3>
+        <select name="destination"> 
+            <option value="zendikar">Zendikar</option>
+            <option value="ravnica">Ravnica</option>
+            <option value="innistrad">Innistrad</option>
+            <option value="newPhyrexia">New Phyrexia</option>
+
+        </select>
+        <h3>DIETARY RESTRICTIONS</h3>
+        <div id ="diet">
+            <input type="checkbox" id="vegetarian" name="diet" >
+            <label for="diet">VEGETARIAN</label>
+            <input type="checkbox" id="carnivore" name="diet">
+            <label for="diet">CARNIVORE</label>
+            <input type="checkbox" id="kosher" name="diet">
+            <label for="diet">KOSHER</label>
+        </div>
+        <button name="submit">SUBMIT</button>
+    </form>  
+    <script src="index.js"></script>
+</body>
+</html>
