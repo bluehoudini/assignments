@@ -1,0 +1,14 @@
+*{
+    
+}
+.container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+h1{
+    color:darkorange;
+    justify-content: space-around;
+}
+
+
