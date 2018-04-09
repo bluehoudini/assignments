@@ -1,12 +1,15 @@
 import React from "react";
 
-function Superhero(){
-    return(
+function Superhero(props) {
+    console.log(props)
+    const { handleClick, name, catchphrase, img } = props
+    return (
         <div>
-            <button onClick={catchphrase}>
-                
-            </button>
+            <h1 onClick={() => handleClick(catchphrase)}>
+                name: {name}
+            </h1>
+            <img src={img} alt="" />
         </div>
     )
 }
-export default "./Superhero";
+export default Superhero;

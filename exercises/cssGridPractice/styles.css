@@ -6,10 +6,17 @@
 .container{
     height: 300px;
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: .5fr .5fr .25fr .75fr;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    grid-template-columns: 50px;
+    grid-template-rows: auto;
     grid-gap: 5px;
-    border-radius: 20%;
+    grid-template-areas: 
+    .red .red .red .red
+    .blue  .blue;
+    
 }
 .container div{
     text-align: center;

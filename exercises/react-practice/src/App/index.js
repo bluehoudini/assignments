@@ -49,6 +49,7 @@ class Counter extends Component {
                 <button onClick={this.incrementCounter}>+1</button>
                 <button onClick={this.resetState}>reset</button>
                 <button onClick={this.decrementCounter}>-1</button>
+                <button onClick={this.squareState}>square</button>
             </div>
         )
     }

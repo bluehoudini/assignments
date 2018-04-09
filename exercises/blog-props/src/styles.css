@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    border: 1px solid black;
+
+}
+.head{
+    display: flex;
+    height: 350px;
+}

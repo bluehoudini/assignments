@@ -1,22 +1,22 @@
 [
     {
         "name": "Captain America",
-        "catch phrase": "Avengers Assemble!!!",
-        "img":"https://www.allposters.com.au/-sp/Captain-America-Marvel-Avengers-Assemble-Lifesize-Standup-posters_i9705906_.htm"
+        "catchphrase": "Avengers Assemble!!!",
+        "img":"https://imgc.allpostersimages.com/img/print/posters/captain-america-marvel-avengers-assemble-lifesize-standup_a-G-9705906-0.jpg?w=637&h=942"
     },
     {
         "name": "The Tick",
-        "catch phrase": "Spoooooon!!!",
+        "catchphrase": "Spoooooon!!!",
         "img":"https://vignette.wikia.nocookie.net/p__/images/b/b1/The_Tick.jpg/revision/latest?cb=20171108194709&path-prefix=protagonist"
     },
     {
         "name": "Wolverine",
-        "catch phrase": "I'm the best at what I do.",
+        "catchphrase": "I'm the best at what I do.",
         "img":"https://static.comicvine.com/uploads/original/10/109227/2158133-1872431_20134_3157_22463_1_wolverine_super.jpg"
     },
     {
         "name":"Groot",
-        "catch phrase": "I am Groot.",
+        "catchphrase": "I am Groot.",
         "img":"https://vignette.wikia.nocookie.net/weeklyplanet/images/d/d3/Groot.jpg/revision/latest?cb=20170430212107"
     }
 

@@ -12,8 +12,6 @@ function Friends(props){
             <h1>Name: {name}</h1>
             <h2>Age: {age}</h2>
             {buddyPets}
-            
-            
         </div>
       
     )

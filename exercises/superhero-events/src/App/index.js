@@ -1,9 +1,12 @@
 import React from "react";
+import SuperheroList from "./SuperheroList/";
 
 function App(){
     return(
-        <div></div>
+        <div>
+           <SuperheroList></SuperheroList>
+        </div>
     )
 }
 
-export default "./App";
+export default App;
