@@ -26,7 +26,7 @@ const planetReducer = (state = initialState, action) =>{
     }
 }
 
-const swapiUrl = "https://swapi.com/api/planets/";
+const swapiUrl = "https://swapi.co/api/planets/";
 
 export const getPlanets = () => {
     return dispatch => {

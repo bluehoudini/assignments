@@ -5,6 +5,6 @@ import planetReducer from "./planets";
 
 const store = createStore(combineReducers({planets: planetReducer}), applyMiddleware(thunk));
 
-store.subscribe()
+store.subscribe(()=> console.log(store.getState()))
 
 export default store;
