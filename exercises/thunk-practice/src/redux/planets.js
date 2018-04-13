@@ -7,20 +7,20 @@ const initialState = {
     errMsg: ""
 }
 
-const planetReducer = (state = initialState, action) =>{
-    switch(action.type) {
+const planetReducer = (state = initialState, action) => {
+    switch (action.type) {
         case "GET_PLANETS":
-            return{
+            return {
                 ...state.errMsg,
                 data: action.planets,
                 loading: false
-              }
-              case "ERR_MSG":
-              return {
-                  ...state,
-                  loading: false,
-                  errMsg: action.errMsg
-              }
+            }
+        case "ERR_MSG":
+            return {
+                ...state,
+                loading: false,
+                errMsg: action.errMsg
+            }
         default:
             return state;
     }
@@ -32,9 +32,9 @@ export const getPlanets = () => {
     return dispatch => {
         axios.get(swapiUrl)
             .then(response => {
-                dispatch ({
+                dispatch({
                     type: "GET_PLANETS",
-                    planets:response.data.results
+                    planets: response.data.results
                 })
             })
             .catch(err => {

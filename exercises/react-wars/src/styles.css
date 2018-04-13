@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.container {
+    display: grid;
+    /* grid-template-areas: 
+        "hdr"
+        "nav"
+        "body"
+        "ftr"; */
+        grid-template-rows: .5fr .1fr 1fr .1fr;
+    height: 100vh;
+}
+
+.head{
+    background-image: url("https://images.unsplash.com/photo-1518830686998-b8847466b372?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=226c6e93e81c6f2968bf51966fe397a5&auto=format&fit=crop&w=1684&q=80");
+    text-align: center;
+    background-position: center;
+    font-family: 'Ultra', serif;
+    color: orangered;
+    text-shadow:3px 3px 3px rgb(0, 0, 0);
+    font-size: 30px;
+}
+a{
+    color: whitesmoke;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgb(105, 31, 31);   
+}
+.genTaco{
+    /* display: flex; */
+   /* justify-content: center; */
+    background-color: olivedrab;
+    color: white;
+
+}
+.recipe{
+    margin-left: 33%;
+    margin-right: 33%;
+}
+.footer{
+    text-align: center;
+    background-color: rgb(105, 31, 31);
+}
+.main{
+    background-color: olivedrab;
+    text-align: center;
+
+}
+/* button{
+    color:purple;
+    height: 30px;
+    width:50px;
+} */
