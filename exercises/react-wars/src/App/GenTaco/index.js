@@ -19,7 +19,6 @@ class GenTaco extends Component {
                 
             <div className="genTaco">
                 <button onClick={this.props.getTacos}>Press for taco</button>
-                <button>Save this taco</button>
                 {/* {this.state} */}
                 <Recipe {...data}></Recipe>
                 {/* <h1>{data}</h1> */}

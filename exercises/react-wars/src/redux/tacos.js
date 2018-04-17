@@ -5,7 +5,7 @@ const initialState = {
     loading: true,
     errMsg: ""
 }
-
+//add a button that saves taco recipes and adds them to an object 
 const tacoReducer = (state = initialState, action) => {
     switch (action.type) {
         case "GET_TACOS":
