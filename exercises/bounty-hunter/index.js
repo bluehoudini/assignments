@@ -33,4 +33,11 @@ app.route("/bounties/:id")
         res.status(204).send();
     })
 
+    .put((req, res) => {
+    const {id} = req.params;
+        let editBounty = req.body
+        todos = todos.map(bounty => bounty._id === id ? editedBounty = {...bounty, ...editedBounty} : bounty);
+        res.status(200).send(editedBounty);
+    })
+
 app.listen(port, () => console.log("server running on port" + port));
