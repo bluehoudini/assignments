@@ -1,11 +1,11 @@
 import React from "react";
 
-function App() {
+function Footer() {
     return (
         <div>
-            
+            <p>im the footer</p>
         </div>
     )
 }
 
-export default App;
+export default Footer;

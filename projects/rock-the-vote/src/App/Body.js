@@ -1,11 +1,11 @@
 import React from "react";
 
-function App() {
+function Body() {
     return (
         <div>
-            
+            <p>im the body</p>
         </div>
     )
 }
 
-export default App;
+export default Body;
