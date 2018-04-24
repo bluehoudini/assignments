@@ -15,9 +15,9 @@ function Body() {
                 <input type="radio" id="downVote" name="choiceOne" 
                 value="downVote"></input>
                 <label for="downVote">downvote</label>
-                <div className="comments">comments get put here</div>
-                <button>post</button>
-                <input type="text"/>
+                {/* <div className="comments">comments get put here</div>
+                <button>post</button> */}
+                {/* <input type="text"/> */}
             </form>
             </div>
             </div>
