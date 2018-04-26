@@ -43,5 +43,5 @@ class Form extends Component {
     }
 }
 
-    export default Form;
-    //export default connect(null, {commentOnIssue})(Form);
+    // export default Form;
+    export default connect(null, {commentOnIssue})(Form);
