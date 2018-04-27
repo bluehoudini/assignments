@@ -9,7 +9,7 @@ import NavBar from "./NavBar";
 import Main from "./Main";
 import SignUp from "./SignUp";
 import WatchList from "./WatchList";
-
+// import Form from "./Form";
 
 function App(props) {
     return (
@@ -17,12 +17,12 @@ function App(props) {
             <div className="container">
                 <Header></Header>
                 <NavBar></NavBar>
-                <Footer></Footer>
                 <Switch>
                     <Route exact path="/" component={Main} />
                     <Route path="/sign-up" component={SignUp} />
                     <Route path="/watch-list" component={WatchList} />
                 </Switch>
+                <Footer></Footer>
             </div>
         </div>
     )
