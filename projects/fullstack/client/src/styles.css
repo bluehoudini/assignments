@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    border: 1px solid black;
+}
+
+.landingPage{
+    background-image: url("https://www.magic-ville.com/fr/scan_art?imid=24988");
+    opacity: .6;
+    height: 100vh;
+    width: 100vh;
+    background-position:center;
+    /* background-position: left; */
+    background-position-y: top;
+    background-repeat: no-repeat;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+.landingBody{
+    
+}
+.landingTitle{
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+}
