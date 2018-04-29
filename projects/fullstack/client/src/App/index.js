@@ -9,6 +9,7 @@ import NavBar from "./NavBar";
 import Main from "./Main";
 import SignUp from "./SignUp";
 import WatchList from "./WatchList";
+import SignIn from "./SignIn";
 // import Form from "./Form";
 
 function App(props) {
@@ -20,6 +21,7 @@ function App(props) {
                 <Switch>
                     <Route exact path="/" component={Main} />
                     <Route path="/sign-up" component={SignUp} />
+                    <Route path="/sign-in" component={SignIn} />
                     <Route path="/watch-list" component={WatchList} />
                 </Switch>
                 <Footer></Footer>
