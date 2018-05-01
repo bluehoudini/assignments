@@ -17,7 +17,7 @@ app.use("/cards", cardRouter);
 // app.use("user", userRouter);
 
 mongoose.connect("mongodb://localhost:27017/user", (err) => {
-    if(err) console.log(err);
+    if(!err)
     console.log("connected to MongoDB");
 })
 app.listen(port, () => console.log("Server running on port" + port));

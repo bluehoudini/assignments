@@ -1,10 +1,13 @@
-import {createStore, combineReducers, applyMiddleware} from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 
 import cardReducer from "./cards";
 
-const store = createStore(combineReducers({cards: cardReducer}), applyMiddleware(thunk));
-store.subscribe(() => console.log(store.getState()));
+const store = createStore(combineReducers({ cards: cardReducer }), applyMiddleware(thunk));
+store.subscribe(() => {
+    console.log("store:")
+    console.log(store.getState())
+});
 //create reducer
 
 //define store

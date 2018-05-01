@@ -31,7 +31,7 @@ class Form extends Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        this.props.getCards(this.state.inputs);
+        this.props.getCards(this.state.inputs.cardName);
         this.setState(this.initialState);
     }
     render() {

@@ -1,45 +1,75 @@
 const mongoose = require("mongoose");
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
-const cardSchema = new Schema({
-    "tcg_low": String,
-            "tcg_mid": String,
-            "purchase_link": String,
-            "foil_price": String,
-            // "price_change": "1",
-            "mc": String,
-            "main_type": String,
-            "colors": String,
-            "name": String,
-            "mid": String,
-            "t": String,
-            "set": String,
-            "rarity": String,
-            "types": String,
-            "set_code": String,
-            "expansion": String,
-            // "reserve_list": "0",
-            // "emid": "9523",
-            // "inventory_id": "18521944",
-            // "note_id": "0",
-            // "condition": "NM",
-            "lang": String,
-            "date_acquired": String,
-            // "foil": "0",
-            "price_acquired": String,
-            "current_price": String,
-            "personal_gain": String,
-            "set_image": String,
-            "image_cropped": String,
-            "image": String,
-            // "gain": "0.00",
-            "echo_set_url": String,
-            "echo_url": String,
-            "percentage_html": String,
-            // "market_percentage_html": "<span class=\"percentage green up\">1%</span>"
 
+
+//only keep id
+//when i click the add to watchlist button the id of the card is pushed into my array of saved ids
+//when page mounts it looks at the array of ids and gets the data from the scryfall api
+
+//test function to add card id to watchlist
+const addCardId = ((props) =>{
+    return this.card.id.push([favorites])
+});
+
+//test function that looks at the array of ids and renders them from the scryfall api
+const showSavedCards = (() => {
+    
 })
+
+//my very lonely schema
+const cardSchema = new Schema(
+    {
+        // "object": String,
+        "id": String,
+        // "name": String,
+        // "uri": String,
+        // "scryfall_uri": String,
+        // "layout": String,
+        // "highres_image": Boolean,
+        // "image_uris": {
+        //     "small": String,
+        //     "normal": String,
+        //     "large": String,
+        //     "png": String,
+        // },
+        // "cmc": Number,
+        // "type_line": String,
+        // "oracle_text": String,
+        // "mana_cost": String,
+        // "colors": [
+        //     String
+        // ],
+        // "color_identity": [
+        //     String
+        // ],
+        // "set": String,
+        // "set_name": String,
+        // "set_uri": String,
+        // "set_search_uri": String,
+        // "scryfall_set_uri": String,
+        // "rulings_uri": String,
+        // "prints_search_uri": String,
+        // "rarity": String,
+        // "usd": String,
+        // "eur": String,
+        // "related_uris": {
+        //     "gatherer": String,
+        //     "mtgtop8": String
+        // },
+
+        // "purchase_uris": {
+        //     "amazon": String,
+        //     "ebay": String,
+        //     "tcgplayer": String,
+        //     "magiccardmarket": String,
+        //     "cardhoarder": String,
+        //     "card_kingdom": String,
+        //     "mtgo_traders": String,
+        //     "coolstuffinc": String
+        // }
+    })
 
 const CardModel = mongoose.model("cards", cardSchema);
 module.exports = CardModel;

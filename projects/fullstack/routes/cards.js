@@ -19,6 +19,13 @@ cardRouter.route("/")
             if (err) return res.send(err);
             res.status(201).send(addedCard);
         })
+    })
+    .delete((req, res) => {
+        const newCard = new CardModel(req.body);
+        newCard.save((err, addedCard) => {
+            if (err) return res.send(err);
+            res.status(201).send(addedCard);
+        })
     });
 cardRouter.route("/:id")
     .get((req, res) => {

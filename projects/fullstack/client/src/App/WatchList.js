@@ -1,9 +1,10 @@
 import React from "react";
+import List from "./List"
 
 function WatchList(props) {
     return (
         <div className="watchList">
-            <h1>watch list</h1>
+            <List></List>
         </div>
     )
 }
