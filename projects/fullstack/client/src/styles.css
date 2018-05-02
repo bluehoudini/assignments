@@ -32,9 +32,21 @@
     /* text-align: center; */
     /* border: 1px solid black;  */
 }
+.watchTitle{
+    font-family: 'Fjalla One', sans-serif;
+    padding-bottom: 16px;
+}
+.priceUpdate{
+    font-size: 25px;
+    color: rgb(37, 37, 179);
+    padding-bottom: 33px;
+}
 .planeswalker{
     height: 70px;
     width: auto;
+}
+.fullCard{
+    font-size: 25px;
 }
 a{
     text-decoration: none;

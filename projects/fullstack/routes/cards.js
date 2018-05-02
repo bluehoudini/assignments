@@ -8,10 +8,10 @@ const CardModel = require("../models/cardModels");
 cardRouter.route("/")
     .get((req, res) => {
         CardModel.find(req.query, (err, foundCards) => {
-                if (err) res.send(err);
-                else
-                    res.status(200).send(foundCards)
-            })
+            if (err) res.send(err);
+            else
+                res.status(200).send(foundCards)
+        })
     })
     .post((req, res) => {
         const newCard = new CardModel(req.body);
@@ -20,13 +20,7 @@ cardRouter.route("/")
             res.status(201).send(addedCard);
         })
     })
-    .delete((req, res) => {
-        const newCard = new CardModel(req.body);
-        newCard.save((err, addedCard) => {
-            if (err) return res.send(err);
-            res.status(201).send(addedCard);
-        })
-    });
+
 cardRouter.route("/:id")
     .get((req, res) => {
         CardModel.findOne({ _id: req.params.id },
@@ -36,5 +30,11 @@ cardRouter.route("/:id")
                 res.status(200).send(foundCards)
             })
     })
+    .delete((req, res) => {
+        CardModel.findOneAndRemove({ cardId: req.params.id }, (err) => {
+            if (err) return res.send(err);
+            res.status(204).send();
+        })
+    });
 
 module.exports = cardRouter;

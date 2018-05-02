@@ -3,7 +3,10 @@ import thunk from "redux-thunk";
 
 import cardReducer from "./cards";
 
-const store = createStore(combineReducers({ cards: cardReducer }), applyMiddleware(thunk));
+const store = createStore(
+    combineReducers({ cards: cardReducer }),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(thunk));
 store.subscribe(() => {
     console.log("store:")
     console.log(store.getState())

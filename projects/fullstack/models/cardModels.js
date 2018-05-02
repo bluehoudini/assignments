@@ -9,20 +9,24 @@ const { Schema } = mongoose;
 //when page mounts it looks at the array of ids and gets the data from the scryfall api
 
 //test function to add card id to watchlist
-const addCardId = ((props) =>{
-    return this.card.id.push([favorites])
+const addCardId = ((props, array) => {
+    return this.card.id.push(favorites)
 });
 
 //test function that looks at the array of ids and renders them from the scryfall api
 const showSavedCards = (() => {
-    
-})
+    //map through the scryfall api
+    //if the id of a card in your watchlist matches the id of card in scryfall api then render that card
+});
 
 //my very lonely schema
 const cardSchema = new Schema(
     {
         // "object": String,
-        "id": String,
+        "cardId": {
+            type: String,
+            // unique: true
+        },
         // "name": String,
         // "uri": String,
         // "scryfall_uri": String,

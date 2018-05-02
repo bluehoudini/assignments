@@ -15,13 +15,13 @@ class Main extends Component {
     render() {
         const { data } = this.props
         const cardComponents = data
-            .map((cards, i) => <FullCard key={cards._id} getOneCard={getOneCard}{...cards}></FullCard>)
+            .map((cards, i) => <FullCard key={cards._id} getOneCard={getOneCard}{...cards} />)
         console.log(this.props)
         return (
             <div className="genCard">
                 <p className="intro">The mtg card price tracker<br />you've been looking for</p>
                 <p className="searchHere">Search here to look up a card</p>
-                <Form></Form>
+                <Form />
                 {/* <p className="moreInfo">Search from among the entire magic the gathering library to find the </p> */}
                 {/* <button onClick={getCards}>search</button> */}
                 {cardComponents}

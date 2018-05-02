@@ -1,23 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { removeOneCard, postCard } from "../../redux/cards";
-import Item from "./Item"
+import { removeOneCard, getFavorites } from "../../redux/cards";
+import Item from "./Item";
 
+class List extends Component {
+    componentDidMount() {
+        this.props.getFavorites();
+    }
 
-function List(props) {
-    const cardsComponents = props.data.map((card, i) => <Item {...card}
-        removeOneCard={props.removeOneCard} index={i} key={card.id} ></Item>)
-    return (
-        <div>
-            {cardsComponents}
-        </div>
-    )
+    render() {
+        const watchlistComponents = this.props.favoriteCards.map(card => {
+
+            // search the mtg data (props.data) for the card with cardId
+            // const card = props.data.find(apiCard => apiCard.id === cardId);
+            // console.log(card.image_uris)
+            return <Item {...card} removeOneCard={this.props.removeOneCard} key={card._id} />
+        });
+
+        return (
+            <div>
+                {watchlistComponents}
+            </div>
+        )
+    }
 }
 const mapStateToProps = state => {
     return state.cards;
 }
 
-export default connect(mapStateToProps, { removeOneCard, postCard })(List);
+export default connect(mapStateToProps, { removeOneCard, getFavorites })(List);
 
 // import React, { Component } from "react";
 
@@ -41,9 +52,9 @@ export default connect(mapStateToProps, { removeOneCard, postCard })(List);
 
 
     // render() {
-    //     const { favorites, loading, errMsg} = this.props;
+    //     const { favoriteIds, loading, errMsg} = this.props;
 
-    //     const cardComponents = favorites
+    //     const cardComponents = favoriteIds
         //     .filter((card, i) => {
         //         if(!searchTerm) return true;
         //         return superhero.name.toLowerCase().replace(/[^a-z0-9]/g, '').includes(searchTerm.toLowerCase().replace(/[^a-z0-9]/g, ''));
