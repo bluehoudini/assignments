@@ -40,6 +40,7 @@
     font-size: 25px;
     color: rgb(37, 37, 179);
     padding-bottom: 33px;
+    font-family: 'Fjalla One', sans-serif;
 }
 .planeswalker{
     height: 70px;
@@ -67,6 +68,10 @@ h1{
     
     
 }
+/* .fullCardImage{
+    height:300px;
+    width: auto
+} */
 button{
     height: 40px;
     width: 70px;

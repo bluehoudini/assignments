@@ -12,7 +12,6 @@ const { Schema } = mongoose;
 const addCardId = ((props, array) => {
     return this.card.id.push(favorites)
 });
-
 //test function that looks at the array of ids and renders them from the scryfall api
 const showSavedCards = (() => {
     //map through the scryfall api

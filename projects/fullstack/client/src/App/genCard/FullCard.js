@@ -11,7 +11,7 @@ function FullCard(props) {
     return (
         <div className="fullCard">
             {/* <h2>{object}</h2> */}
-            <img src={image_uris.normal} alt="" />
+            <img className="fullCardImage" src={image_uris.normal} alt="" />
             <h3 className="fullCard">Market Price: <br/> ${usd} <br />  Tix: {tix}</h3>
             <button id={id} onClick={() => props.addToWatchlist(id)}>add to watchlist</button>
         </div>
