@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+.myFace{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    background-color: orangered;
+}
+.nameTitle{
+    font-family: 'Asap', sans-serif;
+}
+.fullStackTitle{
+    font-family: 'Asap', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-rows: .1fr 1fr .1fr;
+    height: 100vh;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+bazaarPic{
+    height: 90px;
+    width: auto;
+}
+.myName{
+    font-weight: bold;
+}
+a{
+    padding-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color:rgb(232, 93, 43);
+}
+.upperLinks{
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+.Header{
+    /* background-color: rgb(218, 218, 218); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    color: rgb(2, 187, 169);
+    border-bottom: 1px solid black;
+}
