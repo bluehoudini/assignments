@@ -10,7 +10,7 @@ const issueRouter = require("./routes/issues")
 const app = express();
 const db = process.env.MONGODB_URI || "mongodb://localhost:27017/user";
 
-app.use(bosyParser.json());
+app.use(bodyParser.json());
 app.use(morgan("rock"));
 app.use(express.static(path.join(__dirname, "client", "build")));
 

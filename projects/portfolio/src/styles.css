@@ -4,6 +4,9 @@
     box-sizing: border-box;
     background-color: rgb(255, 255, 255);
 }
+.bold{
+    font-weight: bold;
+}
 .myFace{
     display: flex;
     flex-direction: row;
@@ -31,6 +34,12 @@ bazaarPic{
     height: 90px;
     width: auto;
 }
+.bazaarLink{
+    height: 250px;
+    width: 390px;
+    margin-top: 30px;
+    border: 1px solid black;
+}
 .myName{
     font-weight: bold;
 }
@@ -54,4 +63,11 @@ a:hover{
     padding-top: 10px;
     color: rgb(2, 187, 169);
     border-bottom: 1px solid black;
+}
+.Contact{
+    margin-top: 30px;
+}
+.symbol{
+    height: 20px;
+    width: auto;
 }
