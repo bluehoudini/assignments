@@ -6,7 +6,16 @@
 }
 .bold{
     font-weight: bold;
+    color:rgb(232, 93, 43);
 }
+.iconPic{
+    height: 65px;
+    width: 65px;
+}
+/* .twitterPic{
+    height: 20px;
+    width: auto;
+} */
 .myFace{
     /* display: flex; */
     /* justify-content: center; */
@@ -35,15 +44,25 @@
 bazaarPic{
     height: 90px;
     width: auto;
+    /* border: 1px solid black; */
 }
 .bazaarLink{
     height: 250px;
     width: 390px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     border: 1px solid black;
 }
-.myName{
-    font-weight: bold;
+.aboutMe{
+    padding-top: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+.skillz{
+    text-align: center;
+    padding-top: 22px;
+}
+.strengths{
+    padding-top: 22px;
 }
 a{
     padding-right: 15px;
@@ -63,20 +82,45 @@ a:hover{
     justify-content: center;
     align-items: center;
     padding-top: 10px;
+    margin-bottom: 20px;
     color: rgb(2, 187, 169);
     border-bottom: 1px solid black;
     /* background-color: black; */
 }
 .Contact{
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin-top: 30px; */
 }
 .symbol{
     height: 20px;
     width: auto;
 }
+.iconContainer{
+    margin-top: 30px;
+}
 .Body{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.Portfolio{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
     justify-content: center;
+}
+.myChartDiv canvas {
+    width: 100%;
+  }
+.doughnutTest{
+    display: flex;
+    height: 200px;
+    width: 300px;
+    
 }
 .introText{
     padding-top: 60px;

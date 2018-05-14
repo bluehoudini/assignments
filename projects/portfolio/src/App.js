@@ -2,6 +2,7 @@ import React from "react";
 import {Switch, Route} from "react-router-dom";
 import Header from "./Header";
 import Body from "./Body";
+import Doughnut from "./Doughnut";
 import Footer from "./Footer";
 import Contact from "./Contact";
 import Portfolio from "./Portfolio";

@@ -3,11 +3,14 @@ import React from "react";
 function Contact() {
     return (
         <div className="Contact">
-            <p><span className="bold">email</span>: freewillpowers87@gmail.com<img className="symbol" src="https://banner.kisspng.com/20180320/hwq/kisspng-heart-area-text-symbol-clip-art-gmail-5ab0ec9b087e13.9473688615215443470348.jpg" alt="" /></p>
-            <p><a href="https://www.linkedin.com/in/willpowers1/"><img className="symbol" src="http://www.vectorico.com/wp-content/uploads/2018/02/LinkedIn-Icon-300x300.png" alt="" /></a>linkedin.com/in/willpowers1</p>
-            <p><span className="bold">twitter</span>:<a href="https://twitter.com/freewillpowers"><img className="symbol" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" alt="" /></a></p>
-            <p><span className="bold">github</span>: <a href="https://github.com/bluehoudini"> <img className="symbol" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt=""/></a></p>
-
+            <h2>Git In Touch</h2>
+            <p>For any inquiries, or if you just want to talk, email me at <a href="https://freewillpowers87@gmail.com"><span className="bold">freewillpowers87@gmail.com</span></a></p>
+            <iconContainer className="iconContainer">
+            <h2>Find Me On Social Media</h2>
+            <a href="https://github.com/bluehoudini"><img className="iconPic" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="" /></a>
+            <a href="https://twitter.com/freewillpowers"><img className="iconPic"src="https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png" alt=""/></a>
+            <a href="https://www.linkedin.com/in/willpowers1/"><img className="iconPic" src="https://png.icons8.com/metro/1600/linkedin.png" alt=""/> </a>
+            </iconContainer>
         </div>
     )
 }
