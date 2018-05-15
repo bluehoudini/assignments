@@ -6,6 +6,6 @@ import { BrowserRouter as Router} from "react-router-dom";
 
 import { Provider } from "react-redux";
 import store from "./redux/";
-import "./styles.css/";
+import "./styles.css/.";
 
 ReactDOM.render(<App />, document.getElementById("root"));

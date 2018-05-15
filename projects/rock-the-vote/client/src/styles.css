@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+
+}
+.Body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.magnet{
+    height: 50px;
+    width: 50px;
+}
+.Header{
+    text-align: center;
+    height: 80px;
+    border-bottom: 1px solid black;
+
+}
+/* .partition{
+    display: grid;
+    grid-column: 1fr 1fr;
+    border: 1px solid black;
+} */

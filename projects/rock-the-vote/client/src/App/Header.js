@@ -2,10 +2,10 @@ import React from "react";
 
 function Header() {
     return (
-        <div>
-            <p>im the header</p>
+        <div className="Header">
+            <h1>Polarity</h1>
         </div>
     )
 }
 
-export default Footer;
+export default Header;

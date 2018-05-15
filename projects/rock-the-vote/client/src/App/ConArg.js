@@ -1,6 +1,6 @@
 import React from "react";
 
-function ConArg() {
+function ConArg(props) {
     return (
         <div>
             <h1>cons go here</h1>
