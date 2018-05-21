@@ -1,11 +1,16 @@
-import {createStore, combineReducers, applyMiddleware} from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import argumentReducer from "./arguments"
 
-const store = createStore(combineReducers({ argument: argumentReducer}));
+import issueReducer from "./issues";
+import commentReducer from "../"; 
 
-store.subscribe(()=>{
-    console.log(store.getState());
-})
+const globalState = {
+    issues: issueReducer, 
+    comments: commentReducer
+};
+
+const store = createStore(combineReducers(globalState), applyMiddleware(thunk));
+
+store.subscribe(() => console.log(store.getState()));
 
 export default store;

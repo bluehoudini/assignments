@@ -1,24 +1,26 @@
 const express = require("express");
-const port = process.env.PORT || 8880
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const morgan = require("morgan");
-const path = require("path");
 
-const issueRouter = require("./routes/issues")
+const logger = require("./middleware/logger.js");
+const issueRouter = require("./routes/issues.js");
+const commentRouter = require("./routes/comments.js");
 
 const app = express();
-const db = process.env.MONGODB_URI || "mongodb://localhost:27017/user";
+const port = 8080;
 
 app.use(bodyParser.json());
-app.use(morgan("rock"));
-app.use(express.static(path.join(__dirname, "client", "build")));
+app.use(logger);
 
 app.use("/issues", issueRouter);
+app.use("/comments", commentRouter);
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+mongoose.connect("mongodb://localhost/issues", (err) => {
+    if (err) console.error(err);
+    console.log("Connected to MongoDB");
+})
+app.listen(port, () => console.log("Server running on port " + port));
+
 
 mongoose.connect(db, (err) => {
     if(!err)

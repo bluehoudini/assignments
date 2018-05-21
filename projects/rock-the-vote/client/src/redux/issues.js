@@ -6,44 +6,44 @@ const initialState = {
     errMsg: ""
 }
 
-const commentReducer = (state = initialState, action) => {
+const issueReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "GET_COMMENTS": {
+        case "GET_ISSUES": {
             return {
                 ...state,
                 loading: false,
-                data: action.comments
+                data: action.issues
             }
         }
-        case "GET_COMMENT": {
+        case "GET_ISSUE": {
             return {
                 ...state,
                 loading: false,
-                currentArtist: action.comment
+                currentIssue: action.issue
             }
         }
-        case "ADD_COMMENT": {
+        case "ADD_ISSUE": {
             return {
                 ...state,
                 loading: false,
-                data: [...state.data, action.comment]
+                data: [...state.data, action.issue]
             }
         }
-        case "REMOVE_COMMENT":
+        case "REMOVE_ISSUE":
             return {
                 ...state,
                 loading: false,
-                data: state.data.filter(comment => comment._id !== action.id)
+                data: state.data.filter(issue => issue._id !== action.id)
             }
-        case "EDIT_COMMENT":
+        case "EDIT_ISSUE":
             return {
                 ...state,
                 loading: false,
-                data: state.data.map(comment => {
-                    if (comment._id === action.id) {
-                        return action.comment;
+                data: state.data.map(issue => {
+                    if (issue._id === action.id) {
+                        return action.issue;
                     } else {
-                        return comment;
+                        return issue;
                     }
                 })
             }
@@ -59,13 +59,14 @@ const commentReducer = (state = initialState, action) => {
     }
 }
 
-export const getComments = () => {
+export const getIssues = () => {
     return dispatch => {
-        axios.get("/comments")
+        axios.get("/issues")
             .then(response => {
+                console.log(response.data);
                 dispatch({
-                    type: "GET_COMMENTS",
-                    comments: response.data
+                    type: "GET_ISSUES",
+                    issues: response.data
                 })
             })
             .catch(err => {
@@ -77,13 +78,13 @@ export const getComments = () => {
     }
 }
 
-export const getComment = (id) => {
+export const getIssue = (id) => {
     return dispatch => {
-        axios.get("/comments/" + id)
+        axios.get("/issues/" + id)
             .then(response => {
                 dispatch({
-                    type: "GET_COMMENT",
-                    comments: response.data
+                    type: "GET_ISSUE",
+                    issues: response.data
                 })
             })
             .catch(err => {
@@ -95,14 +96,13 @@ export const getComment = (id) => {
     }
 }
 
-export const addComment = (newComment) => {
-    console.log(newComment)
+export const addIssue = (newIssue) => {
     return dispatch => {
-        axios.post("/comments/", newComment)
+        axios.post("/issues/", newIssue)
             .then(response => {
                 dispatch({
-                    type: "ADD_COMMENT",
-                    comment: response.data
+                    type: "ADD_ISSUE",
+                    issue: response.data
                 })
             })
             .catch(err => {
@@ -114,12 +114,12 @@ export const addComment = (newComment) => {
     }
 }
 
-export const removeComment = (id) => {
+export const removeIssue = (id) => {
     return dispatch => {
-        axios.delete("/comments/" + id)
+        axios.delete("/issues/" + id)
             .then(response => {
                 dispatch({
-                    type: "REMOVE_COMMENT",
+                    type: "REMOVE_ISSUE",
                     id
                 })
             })
@@ -132,13 +132,14 @@ export const removeComment = (id) => {
     }
 }
 
-export const editComment = (id, newComment) => {
+export const editIssue = (id, newIssue) => {
     return dispatch => {
-        axios.put("/comments/" + id, newComment)
+        axios.put("/issues/" + id, newIssue)
             .then(response => {
+                console.log(newIssue);
                 dispatch({
-                    type: "EDIT_COMMENT",
-                    comment: response.data,
+                    type: "EDIT_ISSUE",
+                    issue: response.data,
                     id
                 })
             })
@@ -151,4 +152,4 @@ export const editComment = (id, newComment) => {
     }
 }
 
-export default commentReducer; 
+export default issueReducer; 

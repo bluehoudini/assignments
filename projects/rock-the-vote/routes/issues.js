@@ -1,62 +1,60 @@
 const express = require("express");
-const issueRoute = express.Router();
+const issueRouter = express.Router();
 
-const uuid = require("uuid");
-const IssueModel = require("../models/issueModel");
+const IssueModel = require("../models/issues.js");
+const CommentModel = require("../models/comments.js");
 
-issueRoute.route("/")
+issueRouter.route("/")
     .get((req, res) => {
         IssueModel.find(req.query)
-            .exec((err, foundIssue) => {
-                if (err) {
-                    res.status(400).send(err)
-                } else if (foundIssue) {
-                    res.status(200).send(foundIssue)
-                } else {
-                    res.status(404).send("Issue not found")
-                }
-            })
+            .populate("commentId")
+            .exec((err, foundIssues) => {
+                if (err) return res.send(err);
+                res.status(200).send(foundIssues)
+            });
     })
     .post((req, res) => {
-        const newData = new IssueModel(req.body)
-        newData.save((err, addedData) => err ? res.status(400).send(err) : res.status(201).send(addedData))
-    })
-    issueRoute.route("/:id")
-        .get((req, res)=>{
-            IssueModel.findOne({ _id: req.params.id})
-            .exec((err, foundIssue)=>{
-                if (err){
-                    res.status(400).send(err)
-                } else if (foundIssue) {
-                    res.status(200).send(foundIssue)
-                } else {
-                    res.status(400).send("Issue not found")
-                }
-            })
-        })
-        .delete((req, res)=>{
-            IssueModel.findOneAndRemove({ _id: req.params.id})
-                .exec(((err, delIssue)=>{
-                    if (err) {
-                        res.status(400).send(err)
-                    } else if (delIssue){
-                        res.status(204).send()
-                    } else {
-                        res.status(404).send("404 --- Isseue not found")
-                    }
-                }))
-        })
-        .put((req, res)=>{
-            IssueModel.findOneAndUpdate({ _id: req.params.id}, req.body, { new: true})
-            exec(((err, updateIssue)=>{
-                if (err) {
-                    res.status(400).send(err)
-                } else if (updateIssue) {
-                    res.status(200).send(updateIssue)
-                } else {
-                    res.status(404).send("404 --- Issue not found")
-                }
-            }))
-        })
+        const newIssue = new IssueModel(req.body);
+        newIssue.save((err, savedIssue) => {
+            if (err) return res.send(err);
+            IssueModel.populate(savedIssue, { path: "commentId" }, (err, popIssue) => {
+                if (err) return res.send(err);
+                res.status(201).send(popIssue)
+            });
+        });
+    });
 
-module.exports = issueRoute
+issueRouter.route("/:id")
+    .get((req, res) => {
+        IssueModel.findOne({ _id: req.params.id })
+            //populate will show the id in full so it's the document associated with the id.
+            .populate("commentId")
+
+            // now execute query
+            .exec((err, foundIssue) => {
+                if (err) return res.send(err);
+                if (!foundIssue) return res.status(404).send({ message: "Issue Not Found" })
+                res.status(200).send(foundIssue)
+            })
+    })
+
+    .delete((req, res) => {
+        IssueModel.findOneAndRemove({ _id: req.params.id }, (err, deletedIssue) => {
+            if (err) return res.send(err);
+            if (!deletedIssue) return res.status(404).send({ message: "Issue Not Found" })
+            res.status(204).send();
+        })
+    })
+
+    .put((req, res) => {
+        console.log(req.body)
+        IssueModel.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+            .populate("commentId")
+            .exec((err, updatedIssue) => {
+                if (err) return res.send(err);
+                if (!updatedIssue) return res.status(404).send({ message: "Issue Not Found" });
+                res.status(200).send(updatedIssue);
+            })
+    })
+
+module.exports = issueRouter;
