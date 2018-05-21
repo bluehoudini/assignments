@@ -2,10 +2,8 @@ import React from "react";
 import Body from "./Body";
 import Header from "./Header";
 import Footer from "./Footer";
-import ConArg from "./ConArg";
-import ProArg from "./ProArg";
-import conForm from "./conForm";
-import proForm from "./proForm";
+import Form from "./Form";
+
 
 function App() {
     return (
