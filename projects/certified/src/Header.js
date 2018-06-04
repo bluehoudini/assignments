@@ -2,7 +2,7 @@ import React from "react";
 
 function Header(props){
     return(
-        <div className="Header">the head be here!!!111</div>
+        <div className="Header">The Certified Human Project</div>
     )
 }
 
