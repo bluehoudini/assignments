@@ -5,7 +5,8 @@ function Body() {
     return (
 
         <div className="Body">
-            <div className="aboutMe">Hello, my name is Will Powers and I make things for the internet.
+                <img className="myFace" src="https://pbs.twimg.com/profile_images/998600602702692352/rQswE_Q2_400x400.jpg" alt="myPicture" />
+            <div className="aboutMe">Howdy, my name is Will Powers and I make things for the internet.
             </div>
             <div className="skillz">
                 <h2>My Skills</h2>
