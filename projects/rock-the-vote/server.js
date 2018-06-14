@@ -22,8 +22,9 @@ mongoose.connect("mongodb://localhost/issues", (err) => {
 app.listen(port, () => console.log("Server running on port " + port));
 
 
-mongoose.connect(db, (err) => {
-    if(!err)
-    console.log("connected to MongoDB");
+const db= process.env.MONGODB_URI
+mongoose.connect(db, (err) => { 
+if(err) console.error(err);
+console.log("connected to MongoDB")
 })
 app.listen(port, () => console.log("Server running on port" + port));

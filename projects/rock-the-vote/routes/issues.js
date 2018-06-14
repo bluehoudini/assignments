@@ -1,7 +1,7 @@
 const express = require("express");
 const issueRouter = express.Router();
 
-const IssueModel = require("../models/issues.js");
+const IssueModel = require("../models/issueModel");
 const CommentModel = require("../models/comments.js");
 
 issueRouter.route("/")
