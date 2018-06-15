@@ -22,8 +22,8 @@ a{
     justify-content: center;
     font-size: 60px;
     font-family: 'Anton', sans-serif;
-    /* margin-left: 20%;
-    margin-right: 20%; */
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .Main{
     display: flex;
@@ -46,4 +46,7 @@ a{
 .post1{
     color: rgb(37, 114, 216);
     font-family: 'Poppins', sans-serif;
+}
+.description1{
+    font-family: 'Archivo Narrow', sans-serif;
 }
