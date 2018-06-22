@@ -4,7 +4,7 @@ function Contact() {
     return (
         <div className="Contact">
             <h2>Git In Touch</h2>
-            <p>For any inquiries, or if you just want to talk, email me at <a href="https://freewillpowers87@gmail.com"><span className="bold">freewillpowers87@gmail.com</span></a></p>
+            <p>For any inquiries, or if you just want to say hi, email me at <a href="https://freewillpowers87@gmail.com"><span className="bold">freewillpowers87@gmail.com</span></a></p>
             <iconContainer className="iconContainer">
             <h2>Find Me On Social Media</h2>
             <a href="https://github.com/bluehoudini"><img className="iconPic" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="" /></a>
