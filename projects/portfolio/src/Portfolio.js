@@ -13,7 +13,6 @@ function Portfolio() {
                     <p>- Built a <span className="boldFont">RESTful API</span> in <span className="boldFont">Node.js</span> and <span className="boldFont">Express</span> providing endpoints for post CRUD functionality</p>
                 </div>
             </FadeIn>
-
             <a className="bazaarLink" href="https://bazaartrader.herokuapp.com/"><img className="bazaarLink" src="https://preview.ibb.co/cqQHm7/bazaar.png" alt="bazaar" border="0"></img></a>
         </div>
 

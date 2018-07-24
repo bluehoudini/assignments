@@ -4,4 +4,10 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "./styles.css"
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import { BrowserRouter as Router } from "react-router-dom";
+
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>
+    , document.getElementById("root"));
