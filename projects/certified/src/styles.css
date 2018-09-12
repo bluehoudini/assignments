@@ -1,26 +1,35 @@
-*{
+* {
     /* border: 1px solid black; */
     margin: 0;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     display: grid;
     grid-template-rows: .2fr 1fr .1fr;
     height: 100vh;
     /* margin-left: 70px;
     margin-right: 70px; */
 }
-a{
+.walk{
+    width: 100vw;
+    height: auto;
+    /* margin-left: 10%; */
+    margin-right: 10%;
+}
+a {
     padding-right: 15px;
     text-decoration: none;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
-.number{
+
+.number {
     color: rgb(90, 89, 89);
     font-size: 35px;
 }
-.Header{
+
+.Header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +40,8 @@ a{
     /* background-color: rgb(70, 127, 248); */
     background-color: #00adb5;
 }
-.Main{
+
+.Main {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -41,21 +51,27 @@ a{
     /* margin-left: 20%;
     margin-right: 20%; */
     /* height: 100vh; */
-
 }
-.Footer{
+
+.Footer {
     display: flex;
     flex-direction: column;
     /* flex-shrink: 0; */
     /* align-items: center; */
     background-color: rgb(41, 40, 40)
 }
-.title{
+
+.title {
     margin-left: 10%;
     margin-right: 10%;
     font-size: 55px;
+    line-height: 65px;
+
+    /* padding-bottom: 30px; */
+    /* padding-top: 30px; */
 }
-.topicTitle{
+
+.topicTitle {
     padding-top: 60px;
     font-family: 'Montserrat', sans-serif;
     margin-left: 10%;
@@ -64,43 +80,73 @@ a{
     color: #00adb5;
     font-size: 24px;
 }
-.post{
+
+.tag {
+    color: #00adb5;
+}
+
+.post {
     margin-left: 10%;
     margin-right: 10%;
     font-family: 'Montserrat', sans-serif;
 }
-.iconPic{
+
+.iconPic {
     height: 50px;
     width: 50px;
 }
-.links{
+
+.links {
     font-size: 16px;
     text-decoration: none;
 }
-.explanation{
+
+.explanation {
     padding-top: 25px;
     color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     margin-left: 10%;
     margin-right: 10%;
+    border-bottom: solid #dd0a35 5px;
 }
-.description1{
+
+.description1 {
     font-family: 'Archivo Narrow', sans-serif;
 }
+
 @media only screen and (min-width: 600px) {
     .title {
         font-size: 77px;
+        padding-top: 30px;
     }
-    .explanation{
+    .explanation {
         font-size: 30px;
+        border-bottom: solid #dd0a35 15px;
+    }
+    .walk{
+        height: 60vh;
+        width: 100vw;
     }
 }
+
 @media only screen and (min-width: 1200px) {
     .title {
-        font-size: 130px;
+        font-size: 115px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+
     }
-    .explanation{
+    .walk{
+        height: 75vh;
+        width: 100%;
+    }
+    .explanation {
         font-size: 44px;
+        border-bottom: solid #dd0a35 25px;
+    }
+    .post{
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }

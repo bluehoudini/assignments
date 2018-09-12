@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
 
-function Header(){
+export default class HelloWorldApp extends Component {
+  render() {
     return (
-        <p>Some text</p>
-    )
+      <View>
+        <Text>Hello world!</Text>
+      </View>
+    );
+  }
 }
-
-export default Header;
